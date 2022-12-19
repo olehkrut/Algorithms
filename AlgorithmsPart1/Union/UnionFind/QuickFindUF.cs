@@ -3,7 +3,7 @@
     /// <summary>
     /// Quick find implementation of Union Find
     /// </summary>
-    public class QuickFindUF
+    public class QuickFindUF : IUnionFind
     {
         private readonly int[] _store;
 
