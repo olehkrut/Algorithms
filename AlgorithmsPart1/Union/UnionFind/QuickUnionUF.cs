@@ -1,5 +1,10 @@
 ﻿namespace UnionFind
 {
+    /// <summary>
+    /// Quick union implementation.
+    /// Find complexity: O(N) in worst case scenario
+    /// Union complexity: O(N) in worst case scenario
+    /// </summary>
     public class QuickUnionUF : IUnionFind
     {
         private readonly int[] _store;

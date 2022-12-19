@@ -2,6 +2,8 @@
 {
     /// <summary>
     /// Quick find implementation of Union Find
+    /// Connected complexity: O(1)
+    /// Union complexity: O(N)
     /// </summary>
     public class QuickFindUF : IUnionFind
     {
