@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnionFind.Tests", "Union\Un
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Union", "Union", "{B5A635EB-E906-4D93-BA76-1FE9DEB0CEB5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PercolationVizualizer", "PercolationVizualizer\PercolationVizualizer.csproj", "{2FDE0849-2E5C-43F0-92B8-6416917A86BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{8FBEAAE1-DC71-49E6-909C-63B1296CA9FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FBEAAE1-DC71-49E6-909C-63B1296CA9FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FBEAAE1-DC71-49E6-909C-63B1296CA9FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FDE0849-2E5C-43F0-92B8-6416917A86BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FDE0849-2E5C-43F0-92B8-6416917A86BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FDE0849-2E5C-43F0-92B8-6416917A86BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FDE0849-2E5C-43F0-92B8-6416917A86BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +36,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B0296895-60A4-44C9-8A76-276F6B73A394} = {B5A635EB-E906-4D93-BA76-1FE9DEB0CEB5}
 		{8FBEAAE1-DC71-49E6-909C-63B1296CA9FC} = {B5A635EB-E906-4D93-BA76-1FE9DEB0CEB5}
+		{2FDE0849-2E5C-43F0-92B8-6416917A86BB} = {B5A635EB-E906-4D93-BA76-1FE9DEB0CEB5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7B1A680D-E2FB-4E81-8024-8C7E45DA0DF5}
