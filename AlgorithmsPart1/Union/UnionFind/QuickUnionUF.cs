@@ -2,8 +2,9 @@
 {
     /// <summary>
     /// Quick union implementation.
-    /// Find complexity: O(logN) in worst case scenario
-    /// Union complexity: O(logN), because size of each tree can only double.
+    /// Find complexity: O(Nlog*N) in worst case scenario
+    /// Union complexity: O(Nlog*N), because size of each tree can only double.
+    /// log*N - iterative logarithm complexity - very small.
     /// </summary>
     public class QuickUnionUF : IUnionFind
     {
@@ -51,14 +52,15 @@
             }
         }
 
-        private int GetRoot(int child)
+        private int GetRoot(int el)
         {
-            var root = _store[child];
+            while (_store[el] != el)
+            {
+                _store[el] = _store[_store[el]]; // reducing tree depth by directly pointing to root
+                el = _store[el];
+            }
 
-            while (_store[root] != root)
-                root = _store[root];
-
-            return root;
+            return el;
         }
     }
 }
