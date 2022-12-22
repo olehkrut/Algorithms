@@ -23,6 +23,8 @@
             }
         }
 
+        public int Count => _store.Length;
+
         public int GetNumberOfConnectedSets()
             => _store.Where((el, i) => el == i).Count();
 

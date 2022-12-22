@@ -79,8 +79,7 @@ namespace PercolationVizualizer
 
         private async Task LetsStartTheShow()
         {
-            const int extraTwoRoots = 2;
-            var uf = new QuickUnionUF(_size * _size + extraTwoRoots);
+            var grid = new PercolationGrid(_size);
 
             while (true)
             {
@@ -88,12 +87,12 @@ namespace PercolationVizualizer
                 var i = random.Next(_size);
                 var j = random.Next(_size);
 
-                RecordInUnion(uf, i, j);
+                grid.EnableCell(i, j);
 
                 var cell = _drawingGrid.Children.OfType<Rectangle>().First(r => r.Name == $"box{i}{j}");
                 await Dispatcher.InvokeAsync(() => cell.Fill = new SolidColorBrush { Color = Colors.White });
 
-                if (uf.Connected(0, _size * _size + 1))
+                if (grid.Percolates)
                 {
                     MessageBox.Show("Shit is connected");
                     break;
@@ -101,34 +100,6 @@ namespace PercolationVizualizer
 
                 await Task.Delay(500);
             }
-        }
-
-        private void RecordInUnion(QuickUnionUF uf, int i, int j)
-        {
-            _enabledCells.Add((i, j));
-            int maxIndex = _size - 1;
-
-            if (i == 0)
-                uf.Union(ToOneDimension(i, j), 0);
-
-            if (i == maxIndex)
-                uf.Union(ToOneDimension(i, j), _size * _size + 1);
-
-            // add adjacent connection(left, top, right, bottom)
-            if (_enabledCells.Contains((Math.Max(Math.Min(maxIndex, i - 1), 0), j)))
-                uf.Union(ToOneDimension(i, j), ToOneDimension(Math.Min(maxIndex, i - 1), j));
-
-            if (_enabledCells.Contains((Math.Min(maxIndex, i + 1), j)))
-                uf.Union(ToOneDimension(i, j), ToOneDimension(Math.Min(maxIndex, i + 1), j));
-
-            if (_enabledCells.Contains((i, Math.Max(Math.Min(maxIndex, j - 1), 0))))
-                uf.Union(ToOneDimension(i, j), ToOneDimension(i, Math.Min(maxIndex, j - 1)));
-
-            if (_enabledCells.Contains((i, Math.Min(maxIndex, j + 1))))
-                uf.Union(ToOneDimension(i, j), ToOneDimension(i, Math.Min(maxIndex, j + 1)));
-
-            int ToOneDimension(int i, int j)
-                => Math.Max(i, 0) * _size + Math.Max(j, 0) + 1; // + 1 - taking into account first Root
         }
     }
 }
