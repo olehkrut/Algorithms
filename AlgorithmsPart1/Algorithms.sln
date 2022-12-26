@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnionFind.Tests", "Union\Un
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Union", "Union", "{B5A635EB-E906-4D93-BA76-1FE9DEB0CEB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PercolationVizualizer", "PercolationVizualizer\PercolationVizualizer.csproj", "{2FDE0849-2E5C-43F0-92B8-6416917A86BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PercolationVizualizer", "Union\PercolationVizualizer\PercolationVizualizer.csproj", "{2FDE0849-2E5C-43F0-92B8-6416917A86BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
