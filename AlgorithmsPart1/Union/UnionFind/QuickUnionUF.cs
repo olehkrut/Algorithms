@@ -2,8 +2,8 @@
 {
     /// <summary>
     /// Quick union implementation.
-    /// Find complexity: O(Nlog*N) in worst case scenario
-    /// Union complexity: O(Nlog*N), because size of each tree can only double.
+    /// Find complexity: O(log*N) in worst case scenario
+    /// Union complexity: O(log*N), because size of each tree can only double.
     /// log*N - iterative logarithm complexity - very small.
     /// </summary>
     public class QuickUnionUF : IUnionFind
