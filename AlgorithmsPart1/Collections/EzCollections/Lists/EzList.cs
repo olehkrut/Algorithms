@@ -10,7 +10,7 @@ namespace EzCollections.Lists
     {
         private const int DefaultCapacity = 8;
         private const int CapacityMultiplier = 2;
-
+        private const int NotFoundIndex = -1;
         private T[] _arr;
         private int _count;
 
@@ -59,7 +59,7 @@ namespace EzCollections.Lists
                     return i;
             }
 
-            return -1;
+            return NotFoundIndex;
         }
 
         public void Insert(int index, T item)
@@ -110,14 +110,17 @@ namespace EzCollections.Lists
 
         public void CopyTo(T[] array, int arrayIndex)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[arrayIndex + i] = _arr[i];
+            }
         }
 
         public bool Remove(T item)
         {
             var index = IndexOf(item);
 
-            if (index != -1)
+            if (index != NotFoundIndex)
             {
                 RemoveAt(index);
                 return true;
