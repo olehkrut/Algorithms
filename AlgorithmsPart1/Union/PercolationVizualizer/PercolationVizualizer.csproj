@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Union\UnionFind\UnionFind.csproj" />
+    <ProjectReference Include="..\UnionFind\UnionFind.csproj" />
   </ItemGroup>
 
 </Project>
