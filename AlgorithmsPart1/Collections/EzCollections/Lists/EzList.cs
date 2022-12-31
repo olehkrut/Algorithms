@@ -68,7 +68,7 @@ namespace EzCollections.Lists
             var count = _count++;
             IncreaseArrayCapacityIfNeeded();
 
-            for (int i = _count; i > index; --i)
+            for (int i = count; i > index; --i)
             {
                 _arr[i] = _arr[i - 1];
             }
@@ -153,10 +153,7 @@ namespace EzCollections.Lists
             if (_count < _arr.Length)
                 return;
 
-            var newArr = new T[_arr.Length * CapacityMultiplier];
-            _arr.CopyTo(newArr, 0);
-
-            _arr = newArr;
+            Array.Resize(ref _arr, _arr.Length * CapacityMultiplier);
         }
     }
 }
