@@ -1,4 +1,5 @@
 ﻿using EzCollections.Lists;
+using System.Collections;
 
 namespace EzCollections.Stacks
 {
@@ -6,12 +7,13 @@ namespace EzCollections.Stacks
     /// Defines Stack data structure based on the list.
     /// </summary>
     /// <typeparam name="T">Type of element.</typeparam>
-    public class ListBasedStack<T>
+    public class ListBasedStack<T> : IEzStack<T>, IEnumerable<T>
     {
         private readonly EzList<T> _stack = new();
 
         public T Top => _stack.Last();
         public bool IsEmpty => !_stack.Any();
+        public int Count => _stack.Count;
 
         public void Push(T item) 
             => _stack.Add(item);
@@ -29,5 +31,16 @@ namespace EzCollections.Stacks
 
         public void Clear()
             => _stack.Clear();
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            foreach (var item in _stack.Reverse())
+            {
+                yield return item;
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+            => GetEnumerator();
     }
 }

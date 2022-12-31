@@ -56,5 +56,21 @@ namespace EzCollections.Tests
             stack.Top.Should().Be(1);
             stack.IsEmpty.Should().BeFalse();
         }
+
+        [Fact]
+        public void Enumerator_StackNotEmpty_EnumeratesInReverseOrder()
+        {
+            // Arrange
+            var stack = new ListBasedStack<int>();
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+
+            // Act
+            var enumerable = stack.AsEnumerable();
+
+            // Assert
+            enumerable.Should().BeEquivalentTo(new[] { 3, 2, 1 });
+        }
     }
 }
