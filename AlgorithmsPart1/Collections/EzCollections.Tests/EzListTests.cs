@@ -99,5 +99,24 @@ namespace EzCollections.Tests
             ezList.Capacity.Should().Be(oldCapacity * 2);
             ezList.Should().BeEquivalentTo(roleModel);
         }
+
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        [InlineData(3)]
+        public void Remove_ElementExistInCollection_ElementIsRemoved(int element)
+        {
+            // Arrange
+            var ezList = new EzList<int>(3) { 1, 2, 3 };
+            var roleModel = new List<int>(ezList);
+            var expected = roleModel.Remove(element);
+
+            // Act
+            var actual = ezList.Remove(element);
+
+            // Assert
+            actual.Should().Be(expected);
+            ezList.Should().BeEquivalentTo(roleModel);
+        }
     }
 }

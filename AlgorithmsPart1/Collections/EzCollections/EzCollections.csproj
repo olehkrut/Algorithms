@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Stacks\" />
+    <Compile Remove="Stacks\**" />
+    <EmbeddedResource Remove="Stacks\**" />
+    <None Remove="Stacks\**" />
   </ItemGroup>
 
 </Project>
