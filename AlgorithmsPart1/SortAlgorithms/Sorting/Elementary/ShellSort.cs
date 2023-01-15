@@ -1,4 +1,4 @@
-﻿namespace Sorting
+﻿namespace Sorting.Elementary
 {
     /// <summary>
     /// Complexity: N^(3/2)
@@ -8,7 +8,7 @@
     public static class ShellSort
     {
         public static void Sort<T>(IList<T> list) where T : IComparable
-            => Sort(list, (T a, T b) => a.CompareTo(b));
+            => Sort(list, (a, b) => a.CompareTo(b));
 
         public static void Sort<T>(IList<T> list, IComparer<T> comparer)
             => Sort(list, comparer.Compare);

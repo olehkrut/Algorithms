@@ -1,4 +1,4 @@
-﻿namespace Sorting
+﻿namespace Sorting.Elementary
 {
     /// <summary>
     /// Complexity: N^2/4 comparisons, N^2/4 swaps
@@ -7,7 +7,7 @@
     public static class InsertionSort
     {
         public static void Sort<T>(IList<T> list) where T : IComparable
-            => Sort(list, (T a, T b) => a.CompareTo(b));
+            => Sort(list, (a, b) => a.CompareTo(b));
 
         public static void Sort<T>(IList<T> list, IComparer<T> comparer)
             => Sort(list, comparer.Compare);

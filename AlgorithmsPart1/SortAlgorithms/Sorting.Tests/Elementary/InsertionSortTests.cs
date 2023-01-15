@@ -1,6 +1,7 @@
 ﻿using FluentAssertions;
+using Sorting.Elementary;
 
-namespace Sorting.Tests
+namespace Sorting.Tests.Elementary
 {
     public class InsertionSortTests
     {
