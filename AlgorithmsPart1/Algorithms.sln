@@ -17,11 +17,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EzCollections", "Collection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EzCollections.Tests", "Collections\EzCollections.Tests\EzCollections.Tests.csproj", "{E5906C1B-B816-4C85-BEEE-680795BE1AB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorting", "SortAlgorithms\Sorting\Sorting.csproj", "{3098C2F6-9F56-49D1-85D0-973E440DF8FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sorting", "SortAlgorithms\Sorting\Sorting.csproj", "{3098C2F6-9F56-49D1-85D0-973E440DF8FA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sort", "Sort", "{55E2F81B-65B0-40E4-B3F2-3AF5ECE7105A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorting.Tests", "SortAlgorithms\Sorting.Tests\Sorting.Tests.csproj", "{B35087C5-812F-40AC-ABD3-926B33DD161A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sorting.Tests", "SortAlgorithms\Sorting.Tests\Sorting.Tests.csproj", "{B35087C5-812F-40AC-ABD3-926B33DD161A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvexHull", "SortAlgorithms\ConvexHullExample\ConvexHull.csproj", "{78DD56F9-3362-4E4D-82A7-851B3E1B8A82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvexHull.Tests", "SortAlgorithms\ConvexHull.Tests\ConvexHull.Tests.csproj", "{DF095796-9967-460E-8FC5-385DA8C62500}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,14 @@ Global
 		{B35087C5-812F-40AC-ABD3-926B33DD161A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B35087C5-812F-40AC-ABD3-926B33DD161A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B35087C5-812F-40AC-ABD3-926B33DD161A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78DD56F9-3362-4E4D-82A7-851B3E1B8A82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78DD56F9-3362-4E4D-82A7-851B3E1B8A82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78DD56F9-3362-4E4D-82A7-851B3E1B8A82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78DD56F9-3362-4E4D-82A7-851B3E1B8A82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF095796-9967-460E-8FC5-385DA8C62500}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF095796-9967-460E-8FC5-385DA8C62500}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF095796-9967-460E-8FC5-385DA8C62500}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF095796-9967-460E-8FC5-385DA8C62500}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +81,8 @@ Global
 		{E5906C1B-B816-4C85-BEEE-680795BE1AB8} = {7B161992-7A38-42D3-8D8F-AC54300DC8CF}
 		{3098C2F6-9F56-49D1-85D0-973E440DF8FA} = {55E2F81B-65B0-40E4-B3F2-3AF5ECE7105A}
 		{B35087C5-812F-40AC-ABD3-926B33DD161A} = {55E2F81B-65B0-40E4-B3F2-3AF5ECE7105A}
+		{78DD56F9-3362-4E4D-82A7-851B3E1B8A82} = {55E2F81B-65B0-40E4-B3F2-3AF5ECE7105A}
+		{DF095796-9967-460E-8FC5-385DA8C62500} = {55E2F81B-65B0-40E4-B3F2-3AF5ECE7105A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7B1A680D-E2FB-4E81-8024-8C7E45DA0DF5}
